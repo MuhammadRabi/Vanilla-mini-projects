@@ -41,6 +41,19 @@ section {
   cursor: pointer;
   animation: bounce 2s ease-in-out infinite;
 }
+
+@keyframes bounce {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
 .sidebar-toggle:hover {
   transform: rotate(-360deg);
 }
@@ -51,7 +64,7 @@ section {
   border-color: transparent;
   transition: 0.5s;
   cursor: pointer;
-  color: brown;
+  color: #fff;
 }
 
 .close-btn:hover {
@@ -64,20 +77,25 @@ section {
   left: 0;
   height: 100%;
   background-color: var(--clr-bg-primary);
-  width: 30%;
-  transition: 0.5s ease-in-out;
-}
-
-.show-sidebar {
+  width: 25%;
+  transition: 1s ease-in-out;
   transform: translate(-100%);
 }
 
-.links {
-  position: absolute;
+@media (max-width: 960px) {
+  .sidebar {
+    width: 100%;
+  }
+}
+.show-sidebar {
+  transform: translate(0);
+}
+
+.links-container {
+  /*position: absolute;
   left: 50%;
   top: 50%;
-  transform: translate(-50%, -50%);
-  height: 100%;
+  transform: translate(-50%, -50%);*/
   display: flex;
   justify-items: center;
   flex-direction: column;
@@ -86,7 +104,7 @@ section {
 
 .links a {
   display: block;
-  font-size: 48px;
+  font-size: 42px;
   font-weight: 900;
   padding: 15px 5px;
   text-transform: capitalize;
@@ -97,3 +115,23 @@ section {
 .links a:hover {
   padding-left: 45px;
 }
+
+/* start social icon */
+
+.social-icons {
+  display: flex;
+  padding-bottom: 32px;
+  margin: 200px auto;
+}
+
+.social-icons a {
+  font-size: 24px;
+  margin: 0 0.5rem;
+  color: #fff;
+  transition: 0.5s ease-in-out;
+}
+
+.social-icons a:hover {
+  color: #bbb;
+}
+/* end social icon */
