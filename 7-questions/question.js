@@ -14,7 +14,7 @@ questions.forEach((question) => {
   // function
   function dropAnswer() {
     questions.forEach((item) => {
-      // if the index of questions is not matched remove the show-text class
+      // if the index of questions is not matched remove the show-text class if (item !== question)
       if (item !== question) {
         item.classList.remove("show-text");
       }

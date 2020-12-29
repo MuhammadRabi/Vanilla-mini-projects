@@ -41,6 +41,13 @@ section {
   padding-top: 50px;
 }
 
+.title {
+  color: #000;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
 .questions {
   border-radius: 18px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
