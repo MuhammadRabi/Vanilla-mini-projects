@@ -54,7 +54,7 @@ section {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 1px solid #fff;
+  padding-bottom: 7px;
 }
 
 .question-title p {
@@ -73,5 +73,7 @@ section {
 }
 
 .question-text {
+  border-top: 1px solid #fff;
   padding: 15px 0;
+  /*display: none;*/
 }
