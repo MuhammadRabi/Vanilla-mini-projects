@@ -15,3 +15,15 @@ function vidControls() {
     videoContainer.play();
   }
 }
+
+// preloader
+
+// the preloader will be visible as default and will be hidden once video is loaded
+
+const preloader = document.querySelector(".preloader");
+
+window.addEventListener("load", hidePreloader);
+
+function hidePreloader() {
+  preloader.classList.add("hide-preloader");
+}
