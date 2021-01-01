@@ -1,33 +1,18 @@
-// creating variable count
+// selectors
+const openBtn = document.querySelector(".modal-btn");
+const modal = document.querySelector(".modal-overlay");
+const closeBtn = document.querySelector(".close-btn");
 
-let count = 0;
+// eventlisteners
+openBtn.addEventListener("click", openModal);
+closeBtn.addEventListener("click", closeModal);
 
-let counterValue = document.querySelector("#value");
-btn = document.querySelectorAll(".btn");
+// functions
 
-// loop on different buttons
-btn.forEach((cbtn) => {
-  cbtn.addEventListener("click", (e) => {
-    let style = e.target.classList;
-    // if the button has a certain class, increase its value
-    if (style.contains("increase")) {
-      count++;
-    } else if (style.contains("decrease")) {
-      count--;
-    } else {
-      count = 0;
-    }
+function openModal() {
+  modal.classList.add("open-modal");
+}
 
-    // change the color of the three sets of numbers +ve, -ve and zero
-    if (count > 0) {
-      counterValue.style.color = "green";
-    } else if (count < 0) {
-      counterValue.style.color = "red";
-    } else {
-      counterValue.style.color = "#222";
-    }
-
-    // link the value to the number counter
-    counterValue.textContent = count;
-  });
-});
+function closeModal() {
+  modal.classList.remove("open-modal");
+}
